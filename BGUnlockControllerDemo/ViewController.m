@@ -21,8 +21,10 @@
 }
 - (IBAction)buttonAction:(id)sender {
     BGUnlockController *ctrl = [[BGUnlockController alloc] init];
-    ctrl.delegate = self;
+    //数字验证码的次数
     ctrl.passcodeUnlockCount = 10;
+    //数字验证码
+    ctrl.delegate = self;
     ctrl.passcode = @"8573";
     [self presentViewController:ctrl animated:YES completion:NULL];
 }
