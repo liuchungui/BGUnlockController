@@ -6,8 +6,8 @@
     //数字验证码的次数
     ctrl.passcodeUnlockCount = 10;
     //数字验证码
-    ctrl.delegate = self;
     ctrl.passcode = @"8573";
+    ctrl.delegate = self;
     [self presentViewController:ctrl animated:YES completion:NULL];
 ```
 
