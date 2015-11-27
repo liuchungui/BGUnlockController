@@ -1,5 +1,8 @@
+###环境要求
+* iOS 7.0+
+* Xcode 7.1+
 
-创建控制器
+###使用
 
 ```
     BGUnlockController *ctrl = [[BGUnlockController alloc] init];
@@ -23,6 +26,6 @@
 }
 ```
 
-效果如下：
+###效果如下：
 
 ![](http://ww1.sinaimg.cn/large/7746cd07jw1eyfp8y4qnpg207b0cznc9.gif)

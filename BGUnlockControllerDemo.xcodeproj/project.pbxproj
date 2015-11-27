@@ -15,10 +15,10 @@
 		CE1557441C05583800E61264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1557421C05583800E61264 /* LaunchScreen.storyboard */; };
 		CE15574F1C05583800E61264 /* BGUnlockControllerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE15574E1C05583800E61264 /* BGUnlockControllerDemoTests.m */; };
 		CE15575A1C05583800E61264 /* BGUnlockControllerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1557591C05583800E61264 /* BGUnlockControllerDemoUITests.m */; };
-		CE15576B1C05599700E61264 /* BGUnlockController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1557691C05599700E61264 /* BGUnlockController.m */; };
-		CE15576C1C05599700E61264 /* BGUnlockController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE15576A1C05599700E61264 /* BGUnlockController.xib */; };
 		CE15576E1C055AE200E61264 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE15576D1C055AE200E61264 /* LocalAuthentication.framework */; };
-		CE1557751C05775000E61264 /* BGUnlockHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1557741C05775000E61264 /* BGUnlockHelper.m */; };
+		CE8879DF1C08660E0045B59C /* BGUnlockController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8879DB1C08660E0045B59C /* BGUnlockController.m */; };
+		CE8879E01C08660E0045B59C /* BGUnlockController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8879DC1C08660E0045B59C /* BGUnlockController.xib */; };
+		CE8879E11C08660E0045B59C /* BGUnlockHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8879DE1C08660E0045B59C /* BGUnlockHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,12 +55,12 @@
 		CE1557551C05583800E61264 /* BGUnlockControllerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BGUnlockControllerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1557591C05583800E61264 /* BGUnlockControllerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGUnlockControllerDemoUITests.m; sourceTree = "<group>"; };
 		CE15575B1C05583800E61264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE1557681C05599700E61264 /* BGUnlockController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGUnlockController.h; sourceTree = "<group>"; };
-		CE1557691C05599700E61264 /* BGUnlockController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGUnlockController.m; sourceTree = "<group>"; };
-		CE15576A1C05599700E61264 /* BGUnlockController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGUnlockController.xib; sourceTree = "<group>"; };
 		CE15576D1C055AE200E61264 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
-		CE1557731C05775000E61264 /* BGUnlockHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGUnlockHelper.h; sourceTree = "<group>"; };
-		CE1557741C05775000E61264 /* BGUnlockHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGUnlockHelper.m; sourceTree = "<group>"; };
+		CE8879DA1C08660E0045B59C /* BGUnlockController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGUnlockController.h; sourceTree = "<group>"; };
+		CE8879DB1C08660E0045B59C /* BGUnlockController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGUnlockController.m; sourceTree = "<group>"; };
+		CE8879DC1C08660E0045B59C /* BGUnlockController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGUnlockController.xib; sourceTree = "<group>"; };
+		CE8879DD1C08660E0045B59C /* BGUnlockHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGUnlockHelper.h; sourceTree = "<group>"; };
+		CE8879DE1C08660E0045B59C /* BGUnlockHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGUnlockHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +113,7 @@
 		CE1557331C05583800E61264 /* BGUnlockControllerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				CE1557671C05593C00E61264 /* BGUnlockController */,
+				CE8879D91C08660E0045B59C /* BGUnlockController */,
 				CE1557371C05583800E61264 /* AppDelegate.h */,
 				CE1557381C05583800E61264 /* AppDelegate.m */,
 				CE15573A1C05583800E61264 /* ViewController.h */,
@@ -153,17 +153,17 @@
 			path = BGUnlockControllerDemoUITests;
 			sourceTree = "<group>";
 		};
-		CE1557671C05593C00E61264 /* BGUnlockController */ = {
+		CE8879D91C08660E0045B59C /* BGUnlockController */ = {
 			isa = PBXGroup;
 			children = (
-				CE1557681C05599700E61264 /* BGUnlockController.h */,
-				CE1557691C05599700E61264 /* BGUnlockController.m */,
-				CE15576A1C05599700E61264 /* BGUnlockController.xib */,
-				CE1557731C05775000E61264 /* BGUnlockHelper.h */,
-				CE1557741C05775000E61264 /* BGUnlockHelper.m */,
+				CE8879DA1C08660E0045B59C /* BGUnlockController.h */,
+				CE8879DB1C08660E0045B59C /* BGUnlockController.m */,
+				CE8879DC1C08660E0045B59C /* BGUnlockController.xib */,
+				CE8879DD1C08660E0045B59C /* BGUnlockHelper.h */,
+				CE8879DE1C08660E0045B59C /* BGUnlockHelper.m */,
 			);
 			path = BGUnlockController;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -268,7 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE15576C1C05599700E61264 /* BGUnlockController.xib in Resources */,
+				CE8879E01C08660E0045B59C /* BGUnlockController.xib in Resources */,
 				CE1557441C05583800E61264 /* LaunchScreen.storyboard in Resources */,
 				CE1557411C05583800E61264 /* Assets.xcassets in Resources */,
 				CE15573F1C05583800E61264 /* Main.storyboard in Resources */,
@@ -296,10 +296,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE15576B1C05599700E61264 /* BGUnlockController.m in Sources */,
+				CE8879DF1C08660E0045B59C /* BGUnlockController.m in Sources */,
 				CE15573C1C05583800E61264 /* ViewController.m in Sources */,
 				CE1557391C05583800E61264 /* AppDelegate.m in Sources */,
-				CE1557751C05775000E61264 /* BGUnlockHelper.m in Sources */,
+				CE8879E11C08660E0045B59C /* BGUnlockHelper.m in Sources */,
 				CE1557361C05583800E61264 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,6 +526,7 @@
 				CE1557601C05583800E61264 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE1557611C05583800E61264 /* Build configuration list for PBXNativeTarget "BGUnlockControllerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +535,7 @@
 				CE1557631C05583800E61264 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE1557641C05583800E61264 /* Build configuration list for PBXNativeTarget "BGUnlockControllerDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +544,7 @@
 				CE1557661C05583800E61264 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
