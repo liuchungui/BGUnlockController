@@ -104,6 +104,7 @@ static UIImage *ImageWithColor(UIColor * color, CGSize size){
     self.buttonHeightLayoutConstraint.constant = height;
     //设置按钮
     for (UIButton *button in self.buttonArr) {
+        button.exclusiveTouch = YES;
         button.layer.cornerRadius = height/2.0;
         button.layer.borderWidth = 1.0f;
         button.layer.borderColor = [UIColor blueColor].CGColor;
@@ -147,6 +148,10 @@ static UIImage *ImageWithColor(UIColor * color, CGSize size){
     //设置圆点为实心
     UIView *dotView = self.topDotViewArr[self.inputNumCount];
     dotView.backgroundColor = [UIColor blueColor];
+    NSLog(@"inputNumCount = %zd, color:%@", self.inputNumCount, dotView.backgroundColor);
+    for (UIView *view in self.topDotViewArr) {
+        NSLog(@"%@", view.backgroundColor);
+    }
     //存储数字解锁码
     NSInteger codeValue = [self.buttonArr indexOfObject:button];
     self.resultPassCode = [NSString stringWithFormat:@"%@%zd", self.resultPassCode, codeValue];
@@ -160,8 +165,8 @@ static UIImage *ImageWithColor(UIColor * color, CGSize size){
             //屏蔽点击
             self.buttonsSuperView.userInteractionEnabled = NO;
             [self shakePassCodeView:^{
-                self.buttonsSuperView.userInteractionEnabled = YES;
                 [self clearPassCodeView];
+                self.buttonsSuperView.userInteractionEnabled = YES;
                 //自增
                 self.unlockCount ++;
                 //如果已经超过数字解锁码的上限，则调用失败的方法
