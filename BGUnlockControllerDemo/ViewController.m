@@ -22,14 +22,19 @@
 - (IBAction)buttonAction:(id)sender {
     BGUnlockController *ctrl = [[BGUnlockController alloc] init];
     //数字验证码的次数
-    ctrl.passcodeUnlockCount = 10;
+    ctrl.passcodeUnlockCount = 6;
     //数字验证码
     ctrl.delegate = self;
     ctrl.passcode = @"8573";
+    ctrl.fingerprintUnlockMessage = @"通过Home进行解锁";
+    ctrl.fingerprintUnlockFailureTitle = @"使用数字密码解锁";
     [self presentViewController:ctrl animated:YES completion:NULL];
 }
 
 #pragma mark - BGUnlockControllerDelegate
+- (BOOL)shouldUnlockFailureWhenGiveUpFingerprintUnlock:(BGUnlockController *)controller {
+    return NO;
+}
 - (void)unlockController:(BGUnlockController *)controller successWithUnlockType:(BGUnlockControllerUnlockType)unlockType {
     NSString *title = @"";
     if(unlockType == BGUnlockControllerUnlockTouchId) {

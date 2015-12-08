@@ -27,6 +27,15 @@ typedef NS_ENUM(NSInteger, BGUnlockControllerUnlockType) {
 @protocol BGUnlockControllerDelegate <NSObject>
 @required
 /**
+ *  当点击放弃指纹解锁时，是否表示解锁失败
+ *
+ *  @return 默认返回NO
+ */
+@optional
+- (BOOL)shouldUnlockFailureWhenGiveUpFingerprintUnlock:(BGUnlockController *)controller;
+
+@required
+/**
  *  解锁成功
  *
  *  @param controller 解锁控制器
@@ -47,6 +56,16 @@ typedef NS_ENUM(NSInteger, BGUnlockControllerUnlockType) {
  *  指纹解锁的次数，达到上限次数如果没有解锁成功，则弹出数字解锁，默认为3
  */
 @property (nonatomic, assign) NSInteger fingerprintUnlockCount;
+
+/**
+ *  指纹解锁提示信息，默认为“请使用指纹解锁”
+ */
+@property (nonatomic, strong) NSString *fingerprintUnlockMessage;
+
+/**
+ *  指纹解锁失败时的按钮标题，默认为“点击输入数字密码”
+ */
+@property (nonatomic, strong) NSString *fingerprintUnlockFailureTitle;
 
 /**
  *  数字解锁码

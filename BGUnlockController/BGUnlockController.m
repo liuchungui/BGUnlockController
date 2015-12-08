@@ -74,6 +74,8 @@ static UIImage *ImageWithColor(UIColor * color, CGSize size){
     if(self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         self.fingerprintUnlockCount = 3;
         self.passcodeUnlockCount = 5;
+        self.fingerprintUnlockMessage = @"请使用指纹解锁";
+        self.fingerprintUnlockFailureTitle = @"点击输入数字密码";
     }
     return self;
 }
@@ -216,7 +218,7 @@ static UIImage *ImageWithColor(UIColor * color, CGSize size){
 - (void)useFingerprintUnlock {
     self.unlockCount ++;
     self.unlockType = BGUnlockControllerUnlockTouchId;
-    [BGUnlockHelper fingerprintUnlockWithMessage:@"请使用指纹解锁" success:^{
+    [BGUnlockHelper fingerprintUnlockWithMessage:self.fingerprintUnlockMessage failure:self.fingerprintUnlockFailureTitle success:^{
         [self unlockSuccess];
     } failure:^(NSError *error) {
         /*
@@ -226,7 +228,23 @@ static UIImage *ImageWithColor(UIColor * color, CGSize size){
          LAErrorUserFallback         = kLAErrorUserFallback,
          注意：如果是用户取消，则直接启用数字解锁
          */
-        if(error.code == LAErrorUserCancel || error.code == LAErrorUserFallback || self.unlockCount > self.fingerprintUnlockCount) {
+        if(error.code == LAErrorUserCancel || error.code == LAErrorUserFallback) {
+            BOOL isFail = NO;
+            if([self.delegate respondsToSelector:@selector(shouldUnlockFailureWhenGiveUpFingerprintUnlock:)]) {
+                isFail = [self.delegate shouldUnlockFailureWhenGiveUpFingerprintUnlock:self];
+            }
+            if(isFail) {
+                [self unlockFailure];
+            }
+            else {
+                /**
+                 *  替换解锁方式，解锁次数初始化为0
+                 */
+                self.unlockCount = 0;
+                [self usePasscodeUnlock];
+            }
+        }
+        else if(self.unlockCount > self.fingerprintUnlockCount) {
             /**
              *  替换解锁方式，解锁次数初始化为0
              */

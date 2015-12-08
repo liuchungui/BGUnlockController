@@ -16,6 +16,7 @@
 		CE15574F1C05583800E61264 /* BGUnlockControllerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE15574E1C05583800E61264 /* BGUnlockControllerDemoTests.m */; };
 		CE15575A1C05583800E61264 /* BGUnlockControllerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1557591C05583800E61264 /* BGUnlockControllerDemoUITests.m */; };
 		CE15576E1C055AE200E61264 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE15576D1C055AE200E61264 /* LocalAuthentication.framework */; };
+		CE3065C11C1444C2007E6EF1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3065C01C1444C2007E6EF1 /* Security.framework */; };
 		CE8879DF1C08660E0045B59C /* BGUnlockController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8879DB1C08660E0045B59C /* BGUnlockController.m */; };
 		CE8879E01C08660E0045B59C /* BGUnlockController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8879DC1C08660E0045B59C /* BGUnlockController.xib */; };
 		CE8879E11C08660E0045B59C /* BGUnlockHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8879DE1C08660E0045B59C /* BGUnlockHelper.m */; };
@@ -56,6 +57,7 @@
 		CE1557591C05583800E61264 /* BGUnlockControllerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGUnlockControllerDemoUITests.m; sourceTree = "<group>"; };
 		CE15575B1C05583800E61264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE15576D1C055AE200E61264 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		CE3065C01C1444C2007E6EF1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CE8879DA1C08660E0045B59C /* BGUnlockController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGUnlockController.h; sourceTree = "<group>"; };
 		CE8879DB1C08660E0045B59C /* BGUnlockController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGUnlockController.m; sourceTree = "<group>"; };
 		CE8879DC1C08660E0045B59C /* BGUnlockController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGUnlockController.xib; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3065C11C1444C2007E6EF1 /* Security.framework in Frameworks */,
 				CE15576E1C055AE200E61264 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +95,7 @@
 		CE1557281C05583800E61264 = {
 			isa = PBXGroup;
 			children = (
+				CE3065C01C1444C2007E6EF1 /* Security.framework */,
 				CE15576D1C055AE200E61264 /* LocalAuthentication.framework */,
 				CE1557331C05583800E61264 /* BGUnlockControllerDemo */,
 				CE15574D1C05583800E61264 /* BGUnlockControllerDemoTests */,

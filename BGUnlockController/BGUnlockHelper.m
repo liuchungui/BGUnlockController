@@ -55,13 +55,17 @@
     }
 }
 
-+ (void)fingerprintUnlockWithMessage:(NSString *)message success:(void (^)())successBlock failure:(void (^)(NSError *))failureBlock {
++ (void)fingerprintUnlockWithMessage:(NSString *)message
+                             failure:(NSString *)failureTitle
+                             success:(void (^)())successBlock
+                             failure:(void (^)(NSError *))failureBlock {
     //小于iOS8系统调用，不起作用
     if([UIDevice currentDevice].systemVersion.floatValue < 8.0) {
         return;
     }
     //初始化上下文对象
     LAContext *context = [[LAContext alloc] init];
+    context.localizedFallbackTitle = failureTitle;
     //错误对象
     NSError *error = nil;
     //首先使用canEvaluatePolicy 判断设备支持状态
